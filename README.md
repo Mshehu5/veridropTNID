@@ -1,1 +1,1 @@
-React Tailwind Starter template created by... ME AbdLim. wee
+Veridrop MVP created by... VeriDrop Team
