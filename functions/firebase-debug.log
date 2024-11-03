@@ -1,0 +1,1019 @@
+[debug] [2024-11-03T18:05:05.435Z] ----------------------------------------------------------------------
+[debug] [2024-11-03T18:05:05.442Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2024-11-03T18:05:05.443Z] CLI Version:   13.23.1
+[debug] [2024-11-03T18:05:05.443Z] Platform:      darwin
+[debug] [2024-11-03T18:05:05.443Z] Node Version:  v20.11.0
+[debug] [2024-11-03T18:05:05.443Z] Time:          Sun Nov 03 2024 19:05:05 GMT+0100 (GMT+01:00)
+[debug] [2024-11-03T18:05:05.443Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-03T18:05:05.481Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-03T18:05:05.481Z] > authorizing via signed-in user (aaladan453@gmail.com)
+[debug] [2024-11-03T18:05:05.481Z] [iam] checking project veridrop-e62d3 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-03T18:05:05.482Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:05.482Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:05.482Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions [none]
+[debug] [2024-11-03T18:05:05.482Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:05:05.483Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-03T18:05:07.099Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions 200
+[debug] [2024-11-03T18:05:07.100Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-03T18:05:07.100Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:07.100Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:07.100Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-03T18:05:07.101Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-03T18:05:18.856Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-03T18:05:18.857Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'veridrop-e62d3'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2024-11-03T18:05:26.927Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:26.927Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:26.927Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 [none]
+[debug] [2024-11-03T18:05:27.742Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 200
+[debug] [2024-11-03T18:05:27.742Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 {"projectId":"veridrop-e62d3","projectNumber":"119825127004","displayName":"veridrop","name":"projects/veridrop-e62d3","resources":{"hostingSite":"veridrop-e62d3","realtimeDatabaseInstance":"veridrop-e62d3-default-rtdb"},"state":"ACTIVE","etag":"1_6582c689-2b8c-4bd6-be1a-17734394592f"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-03T18:05:27.745Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:27.745Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:27.745Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:27.745Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-03T18:05:27.745Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:27.746Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-03T18:05:27.746Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:27.746Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:27.746Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-03T18:05:27.746Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:05:27.749Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-03T18:05:27.749Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:05:27.750Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-03T18:05:27.750Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:05:27.751Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-03T18:05:27.751Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:05:29.122Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-03T18:05:29.122Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-03T18:05:29.127Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-03T18:05:29.128Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-03T18:05:29.149Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-03T18:05:29.149Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-03T18:05:29.172Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-03T18:05:29.172Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-03T18:05:29.173Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:29.173Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:29.173Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig [none]
+[debug] [2024-11-03T18:05:29.521Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig 200
+[debug] [2024-11-03T18:05:29.521Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig {"projectId":"veridrop-e62d3","databaseURL":"https://veridrop-e62d3-default-rtdb.firebaseio.com","storageBucket":"veridrop-e62d3.firebasestorage.app"}
+[debug] [2024-11-03T18:05:29.522Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:29.522Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:29.523Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs [none]
+[debug] [2024-11-03T18:05:31.072Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs 200
+[debug] [2024-11-03T18:05:31.072Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs {"configs":[{"name":"projects/veridrop-e62d3/configs/gmail"}]}
+[debug] [2024-11-03T18:05:31.073Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:31.073Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:31.073Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables [none]
+[debug] [2024-11-03T18:05:31.380Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables 200
+[debug] [2024-11-03T18:05:31.381Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables {"variables":[{"name":"projects/veridrop-e62d3/configs/gmail/variables/email","updateTime":"2024-11-03T17:03:09.020073010Z"},{"name":"projects/veridrop-e62d3/configs/gmail/variables/password","updateTime":"2024-11-03T17:03:08.386327293Z"}]}
+[debug] [2024-11-03T18:05:31.382Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:31.382Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:31.382Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:31.382Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:31.382Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email [none]
+[debug] [2024-11-03T18:05:31.383Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password [none]
+[debug] [2024-11-03T18:05:31.686Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email 200
+[debug] [2024-11-03T18:05:31.687Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email {"name":"projects/veridrop-e62d3/configs/gmail/variables/email","updateTime":"2024-11-03T17:03:09.020073010Z","text":"aaladan453@gmail.com"}
+[debug] [2024-11-03T18:05:37.848Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password 200
+[debug] [2024-11-03T18:05:37.848Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password {"name":"projects/veridrop-e62d3/configs/gmail/variables/password","updateTime":"2024-11-03T17:03:08.386327293Z","text":"rotlrfdwwcbwllxz"}
+[debug] [2024-11-03T18:05:37.853Z] Validating nodejs source
+[debug] [2024-11-03T18:05:38.867Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.1.0",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-11-03T18:05:38.868Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-03T18:05:38.868Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-03T18:05:38.873Z] Found firebase-functions binary at '/Users/wollow/workspace/sandbox/veridrop/template-web-react-tailwind/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8028
+
+[debug] [2024-11-03T18:05:39.142Z] Got response from /__/functions.yaml {"endpoints":{"sendOrderConfirmation":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"eventTrigger":{"eventType":"google.cloud.firestore.document.v1.created","eventFilters":{"database":"(default)","namespace":"(default)"},"eventFilterPathPatterns":{"document":"orders/{orderId}"},"retry":false},"entryPoint":"sendOrderConfirmation"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-03T18:05:44.162Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:44.163Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:44.163Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-03T18:05:44.163Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:05:49.946Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-03T18:05:49.947Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [omitted]
+[warn] ⚠  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2024-11-03T18:05:49.947Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:49.947Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:05:49.947Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2024-11-03T18:05:49.947Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com:enable x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:05:51.161Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2024-11-03T18:05:51.161Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2024-11-03T18:06:01.164Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:01.165Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:01.166Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-03T18:06:01.166Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:06:02.761Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-03T18:06:02.761Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-03T18:06:02.767Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-03T18:06:02.768Z] > authorizing via signed-in user (aaladan453@gmail.com)
+[debug] [2024-11-03T18:06:02.768Z] [iam] checking project veridrop-e62d3 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-03T18:06:02.768Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:02.768Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:02.768Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions [none]
+[debug] [2024-11-03T18:06:02.768Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:06:02.768Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-03T18:06:04.063Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions 200
+[debug] [2024-11-03T18:06:04.063Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-03T18:06:04.064Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:04.064Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:04.067Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances pageSize=100&pageToken=
+[debug] [2024-11-03T18:06:06.985Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances 200
+[debug] [2024-11-03T18:06:06.985Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/wollow/workspace/sandbox/veridrop/template-web-react-tailwind/functions (83.23 KB) for uploading 
+[debug] [2024-11-03T18:06:07.038Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:07.038Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:06:07.038Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions [none]
+[debug] [2024-11-03T18:06:44.152Z] *** [apiv2] error from fetch(https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions, {"headers":{},"method":"GET"}): FetchError: request to https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions failed, reason: 
+[debug] [2024-11-03T18:06:44.155Z] [functions] failed to list functions for veridrop-e62d3
+[debug] [2024-11-03T18:06:44.155Z] [functions] Failed to make request to https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions
+[debug] [2024-11-03T18:06:49.166Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-11-03T18:07:26.930Z] ----------------------------------------------------------------------
+[debug] [2024-11-03T18:07:26.936Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2024-11-03T18:07:26.936Z] CLI Version:   13.23.1
+[debug] [2024-11-03T18:07:26.936Z] Platform:      darwin
+[debug] [2024-11-03T18:07:26.936Z] Node Version:  v20.11.0
+[debug] [2024-11-03T18:07:26.936Z] Time:          Sun Nov 03 2024 19:07:26 GMT+0100 (GMT+01:00)
+[debug] [2024-11-03T18:07:26.936Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-03T18:07:26.975Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-03T18:07:26.975Z] > authorizing via signed-in user (aaladan453@gmail.com)
+[debug] [2024-11-03T18:07:26.975Z] [iam] checking project veridrop-e62d3 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-03T18:07:26.976Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:26.976Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:26.976Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions [none]
+[debug] [2024-11-03T18:07:26.976Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:26.976Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-03T18:07:28.558Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions 200
+[debug] [2024-11-03T18:07:28.559Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-03T18:07:28.559Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:28.559Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:28.559Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-03T18:07:28.559Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-03T18:07:29.885Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-03T18:07:29.886Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'veridrop-e62d3'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2024-11-03T18:07:37.974Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:37.974Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:37.974Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 [none]
+[debug] [2024-11-03T18:07:39.667Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 200
+[debug] [2024-11-03T18:07:39.668Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 {"projectId":"veridrop-e62d3","projectNumber":"119825127004","displayName":"veridrop","name":"projects/veridrop-e62d3","resources":{"hostingSite":"veridrop-e62d3","realtimeDatabaseInstance":"veridrop-e62d3-default-rtdb"},"state":"ACTIVE","etag":"1_6582c689-2b8c-4bd6-be1a-17734394592f"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:39.671Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:39.671Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:39.671Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:39.671Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:39.672Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:39.672Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:39.673Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:39.673Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:39.673Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-03T18:07:39.673Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:39.675Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-03T18:07:39.675Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:39.677Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-03T18:07:39.677Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:39.678Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-03T18:07:39.679Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:40.873Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-03T18:07:40.873Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-03T18:07:40.881Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-03T18:07:40.882Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-03T18:07:40.936Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-03T18:07:40.936Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-03T18:07:40.940Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-03T18:07:40.940Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-03T18:07:40.941Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:40.941Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:40.941Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig [none]
+[debug] [2024-11-03T18:07:41.306Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig 200
+[debug] [2024-11-03T18:07:41.306Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig {"projectId":"veridrop-e62d3","databaseURL":"https://veridrop-e62d3-default-rtdb.firebaseio.com","storageBucket":"veridrop-e62d3.firebasestorage.app"}
+[debug] [2024-11-03T18:07:41.307Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:41.307Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:41.307Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs [none]
+[debug] [2024-11-03T18:07:41.960Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs 200
+[debug] [2024-11-03T18:07:41.960Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs {"configs":[{"name":"projects/veridrop-e62d3/configs/gmail"}]}
+[debug] [2024-11-03T18:07:41.961Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:41.962Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:41.962Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables [none]
+[debug] [2024-11-03T18:07:42.369Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables 200
+[debug] [2024-11-03T18:07:42.369Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables {"variables":[{"name":"projects/veridrop-e62d3/configs/gmail/variables/email","updateTime":"2024-11-03T17:03:09.020073010Z"},{"name":"projects/veridrop-e62d3/configs/gmail/variables/password","updateTime":"2024-11-03T17:03:08.386327293Z"}]}
+[debug] [2024-11-03T18:07:42.370Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:42.370Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:42.371Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:42.371Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:42.371Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email [none]
+[debug] [2024-11-03T18:07:42.372Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password [none]
+[debug] [2024-11-03T18:07:42.688Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email 200
+[debug] [2024-11-03T18:07:42.689Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email {"name":"projects/veridrop-e62d3/configs/gmail/variables/email","updateTime":"2024-11-03T17:03:09.020073010Z","text":"aaladan453@gmail.com"}
+[debug] [2024-11-03T18:07:43.234Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password 200
+[debug] [2024-11-03T18:07:43.234Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password {"name":"projects/veridrop-e62d3/configs/gmail/variables/password","updateTime":"2024-11-03T17:03:08.386327293Z","text":"rotlrfdwwcbwllxz"}
+[debug] [2024-11-03T18:07:43.237Z] Validating nodejs source
+[debug] [2024-11-03T18:07:43.789Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.1.0",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-11-03T18:07:43.790Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-03T18:07:43.790Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-03T18:07:43.796Z] Found firebase-functions binary at '/Users/wollow/workspace/sandbox/veridrop/template-web-react-tailwind/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8161
+
+[debug] [2024-11-03T18:07:44.070Z] Got response from /__/functions.yaml {"endpoints":{"sendOrderConfirmation":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"eventTrigger":{"eventType":"google.cloud.firestore.document.v1.created","eventFilters":{"database":"(default)","namespace":"(default)"},"eventFilterPathPatterns":{"document":"orders/{orderId}"},"retry":false},"entryPoint":"sendOrderConfirmation"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:49.089Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:49.089Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:49.089Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-03T18:07:49.089Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:51.926Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-03T18:07:51.927Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-03T18:07:51.927Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-03T18:07:51.928Z] > authorizing via signed-in user (aaladan453@gmail.com)
+[debug] [2024-11-03T18:07:51.928Z] [iam] checking project veridrop-e62d3 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-03T18:07:51.928Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:51.928Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:51.929Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions [none]
+[debug] [2024-11-03T18:07:51.929Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:51.929Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-03T18:07:53.364Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions 200
+[debug] [2024-11-03T18:07:53.364Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-03T18:07:53.365Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:53.365Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:53.367Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances pageSize=100&pageToken=
+[debug] [2024-11-03T18:07:54.601Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances 200
+[debug] [2024-11-03T18:07:54.601Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/wollow/workspace/sandbox/veridrop/template-web-react-tailwind/functions (83.23 KB) for uploading 
+[debug] [2024-11-03T18:07:54.649Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:54.649Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:54.649Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions [none]
+[debug] [2024-11-03T18:07:55.653Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions 200
+[debug] [2024-11-03T18:07:55.654Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions {}
+[debug] [2024-11-03T18:07:55.655Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:55.655Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:55.656Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-03T18:07:56.784Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/-/functions 200
+[debug] [2024-11-03T18:07:56.785Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/-/functions {}
+[debug] [2024-11-03T18:07:56.787Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:56.787Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:56.787Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/veridrop-e62d3/databases/(default) [none]
+[debug] [2024-11-03T18:07:58.363Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/veridrop-e62d3/databases/(default) 200
+[debug] [2024-11-03T18:07:58.363Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/veridrop-e62d3/databases/(default) {"name":"projects/veridrop-e62d3/databases/(default)","uid":"fe2f0b17-68dc-48e7-9a5b-5b8d2b313f84","createTime":"2024-11-03T16:47:32.622523Z","updateTime":"2024-11-03T16:47:32.622523Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-11-03T17:07:58.544321Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IJqNw+LgwIkDMMfFlrDawIkD"}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:58.366Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:58.366Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:58.366Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:58.367Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:58.367Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:58.367Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-03T18:07:58.367Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:58.367Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:07:58.367Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com [none]
+[debug] [2024-11-03T18:07:58.368Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:58.371Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com [none]
+[debug] [2024-11-03T18:07:58.371Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:58.373Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com [none]
+[debug] [2024-11-03T18:07:58.373Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:07:58.375Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com [none]
+[debug] [2024-11-03T18:07:58.375Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:08:00.837Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com 200
+[debug] [2024-11-03T18:08:00.837Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2024-11-03T18:08:00.838Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:00.839Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:00.839Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com:enable [none]
+[debug] [2024-11-03T18:08:00.839Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:08:01.975Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com:enable 200
+[debug] [2024-11-03T18:08:01.975Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2024-11-03T18:08:03.156Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com 200
+[debug] [2024-11-03T18:08:03.156Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-03T18:08:03.159Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com 200
+[debug] [2024-11-03T18:08:03.159Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2024-11-03T18:08:03.160Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:03.160Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:03.160Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com:enable [none]
+[debug] [2024-11-03T18:08:03.160Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com:enable x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:08:03.677Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com 200
+[debug] [2024-11-03T18:08:03.678Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-11-03T18:08:04.382Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com:enable 200
+[debug] [2024-11-03T18:08:04.382Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com:enable [omitted]
+[debug] [2024-11-03T18:08:11.977Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:11.977Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:11.978Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com [none]
+[debug] [2024-11-03T18:08:11.978Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:08:14.383Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:14.384Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:14.384Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com [none]
+[debug] [2024-11-03T18:08:14.384Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:08:14.542Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com 200
+[debug] [2024-11-03T18:08:14.542Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-11-03T18:08:15.597Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com 200
+[debug] [2024-11-03T18:08:15.597Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-03T18:08:15.598Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:15.598Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-03T18:08:15.598Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:15.598Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:15.598Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-03T18:08:15.599Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-03T18:08:16.700Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-03T18:08:16.700Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-119825127004@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"117618205349660325317"}}
+[debug] [2024-11-03T18:08:17.311Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-03T18:08:17.312Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-119825127004@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"113526210237906380730"}}
+[debug] [2024-11-03T18:08:17.316Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:17.317Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:17.317Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:getIamPolicy [none]
+[debug] [2024-11-03T18:08:18.599Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:getIamPolicy 200
+[debug] [2024-11-03T18:08:18.599Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:getIamPolicy {"version":1,"etag":"BwYmBgzZfG4=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:119825127004@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-119825127004@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-119825127004@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com","serviceAccount:119825127004@cloudservices.gserviceaccount.com","serviceAccount:veridrop-e62d3@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-119825127004@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebaseappcheck.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-119825127004@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:AaLadan453@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-119825127004@serverless-robot-prod.iam.gserviceaccount.com"]}]}
+[debug] [2024-11-03T18:08:18.600Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:18.600Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:18.600Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:setIamPolicy [none]
+[debug] [2024-11-03T18:08:18.600Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:setIamPolicy {"policy":{"version":1,"etag":"BwYmBgzZfG4=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:119825127004@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-119825127004@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-119825127004@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com","serviceAccount:119825127004@cloudservices.gserviceaccount.com","serviceAccount:veridrop-e62d3@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-119825127004@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebaseappcheck.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-119825127004@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com","serviceAccount:service-119825127004@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:AaLadan453@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-119825127004@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/run.invoker","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com"]},{"role":"roles/eventarc.eventReceiver","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2024-11-03T18:08:20.018Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:setIamPolicy 200
+[debug] [2024-11-03T18:08:20.018Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:setIamPolicy {"version":1,"etag":"BwYmBg2Zx/I=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:119825127004@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-119825127004@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-119825127004@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com","serviceAccount:119825127004@cloudservices.gserviceaccount.com","serviceAccount:veridrop-e62d3@appspot.gserviceaccount.com"]},{"role":"roles/eventarc.eventReceiver","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-119825127004@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebaseappcheck.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-119825127004@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com","serviceAccount:service-119825127004@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:AaLadan453@gmail.com"]},{"role":"roles/run.invoker","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-119825127004@serverless-robot-prod.iam.gserviceaccount.com"]}]}
+[debug] [2024-11-03T18:08:20.019Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:20.019Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:20.020Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 [none]
+[debug] [2024-11-03T18:08:20.707Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 200
+[debug] [2024-11-03T18:08:20.707Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 {"projectId":"veridrop-e62d3","projectNumber":"119825127004","displayName":"veridrop","name":"projects/veridrop-e62d3","resources":{"hostingSite":"veridrop-e62d3","realtimeDatabaseInstance":"veridrop-e62d3-default-rtdb"},"state":"ACTIVE","etag":"1_6582c689-2b8c-4bd6-be1a-17734394592f"}
+[debug] [2024-11-03T18:08:20.708Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:20.708Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:20.708Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/veridrop-e62d3/billingInfo [none]
+[debug] [2024-11-03T18:08:21.961Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/veridrop-e62d3/billingInfo 200
+[debug] [2024-11-03T18:08:21.962Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/veridrop-e62d3/billingInfo {"name":"projects/veridrop-e62d3/billingInfo","projectId":"veridrop-e62d3","billingAccountName":"billingAccounts/01CD30-9595FD-9F9C13","billingEnabled":true}
+[debug] [2024-11-03T18:08:21.964Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:21.964Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:21.965Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-11-03T18:08:25.568Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-11-03T18:08:25.568Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/ed5a4c46-4945-4fc4-8f0b-b47857b6c955.zip?GoogleAccessId=service-119825127004@gcf-admin-robot.iam.gserviceaccount.com&Expires=1730659104&Signature=OONiZsqbJm3mAXJFpzINVRD8hhRiSQgBmVZjslkv1IlrXx7vteJUmb93rTVC0Y4EBrE8hwrr5LjGLCQxGnkMARh7o4eWsEAXe0XO9rHj9TXxoxtIkOHQNbJUMRtz8lM4TFTjSh%2BT5oFEws5p7Gc6yPUV3t20nm290T7ZxlYKv2xsUBWRd31xvoWWoA3AJ1aZmh9o%2FsjjsH59J1UWdTh5Wivff4Xxk%2BfJY6Dpr1hbiS656MG%2FAFnme%2F29G5HKeogfe5nRX6XliHJBWA0131rM74OrvEVWMVpKjnENCk90SLIAb7JDA%2B9HLEXzIrgW0Q%2FCcostMZxfsN3QADBrWOroZg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-119825127004-us-central1","object":"ed5a4c46-4945-4fc4-8f0b-b47857b6c955.zip"}}
+[debug] [2024-11-03T18:08:25.570Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/ed5a4c46-4945-4fc4-8f0b-b47857b6c955.zip GoogleAccessId=service-119825127004%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1730659104&Signature=OONiZsqbJm3mAXJFpzINVRD8hhRiSQgBmVZjslkv1IlrXx7vteJUmb93rTVC0Y4EBrE8hwrr5LjGLCQxGnkMARh7o4eWsEAXe0XO9rHj9TXxoxtIkOHQNbJUMRtz8lM4TFTjSh%2BT5oFEws5p7Gc6yPUV3t20nm290T7ZxlYKv2xsUBWRd31xvoWWoA3AJ1aZmh9o%2FsjjsH59J1UWdTh5Wivff4Xxk%2BfJY6Dpr1hbiS656MG%2FAFnme%2F29G5HKeogfe5nRX6XliHJBWA0131rM74OrvEVWMVpKjnENCk90SLIAb7JDA%2B9HLEXzIrgW0Q%2FCcostMZxfsN3QADBrWOroZg%3D%3D
+[debug] [2024-11-03T18:08:25.570Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/ed5a4c46-4945-4fc4-8f0b-b47857b6c955.zip [stream]
+[debug] [2024-11-03T18:08:27.133Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/ed5a4c46-4945-4fc4-8f0b-b47857b6c955.zip 200
+[debug] [2024-11-03T18:08:27.133Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/ed5a4c46-4945-4fc4-8f0b-b47857b6c955.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function sendOrderConfirmation(us-central1)... 
+[debug] [2024-11-03T18:08:27.136Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:27.136Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:27.136Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions functionId=sendOrderConfirmation
+[debug] [2024-11-03T18:08:27.136Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions {"name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-uploads-119825127004-us-central1","object":"ed5a4c46-4945-4fc4-8f0b-b47857b6c955.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"eventTrigger":{"eventType":"google.cloud.firestore.document.v1.created","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"triggerRegion":"nam5"}}
+[debug] [2024-11-03T18:08:44.059Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions 400
+[debug] [2024-11-03T18:08:44.059Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions {"error":{"code":400,"message":"Validation failed for trigger projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-596533: Invalid resource state for \"\": Permission denied while using the Eventarc Service Agent. If you recently started to use Eventarc, it may take a few minutes before all necessary permissions are propagated to the Service Agent. Otherwise, verify that it has Eventarc Service Agent role.","status":"FAILED_PRECONDITION"}}
+[warn] ⚠  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions?functionId=sendOrderConfirmation had HTTP Error: 400, Validation failed for trigger projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-596533: Invalid resource state for "": Permission denied while using the Eventarc Service Agent. If you recently started to use Eventarc, it may take a few minutes before all necessary permissions are propagated to the Service Agent. Otherwise, verify that it has Eventarc Service Agent role. 
+[warn] ⚠  functions: Since this is your first time using 2nd gen functions, we need a little bit longer to finish setting everything up. Retry the deployment in a few minutes. 
+[warn] ⚠  functions:  failed to create function projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation 
+[error] Failed to create function projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation
+[debug] [2024-11-03T18:08:44.068Z] Total Function Deployment time: 16927
+[debug] [2024-11-03T18:08:44.068Z] 1 Functions Deployed
+[debug] [2024-11-03T18:08:44.068Z] 1 Functions Errored
+[debug] [2024-11-03T18:08:44.069Z] 0 Function Deployments Aborted
+[debug] [2024-11-03T18:08:44.069Z] Average Function Deployment time: 16927
+[info] 
+[info] Functions deploy had errors with the following functions:
+	sendOrderConfirmation(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-03T18:08:44.607Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:44.607Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:44.608Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:44.608Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:44.609Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation [none]
+[debug] [2024-11-03T18:08:44.610Z] >>> [apiv2][query] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list [none]
+[debug] [2024-11-03T18:08:45.925Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation 404
+[debug] [2024-11-03T18:08:45.926Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation {"error":{"code":404,"message":"Package \"projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-03T18:08:46.844Z] <<< [apiv2][status] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list 404
+[debug] [2024-11-03T18:08:46.845Z] <<< [apiv2][body] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-03T18:08:46.845Z] Failed docker command with error  Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-03T18:08:46.848Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:46.848Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:46.848Z] >>> [apiv2][query] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list [none]
+[debug] [2024-11-03T18:08:47.237Z] <<< [apiv2][status] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list 404
+[debug] [2024-11-03T18:08:47.237Z] <<< [apiv2][body] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-03T18:08:47.238Z] Failed docker command with error  Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-03T18:08:47.339Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:47.340Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:08:47.340Z] >>> [apiv2][query] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list [none]
+[debug] [2024-11-03T18:08:47.897Z] <<< [apiv2][status] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list 404
+[debug] [2024-11-03T18:08:47.897Z] <<< [apiv2][body] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-03T18:08:47.897Z] Failed docker command with error  Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/veridrop-e62d3/us/gcf 
+[debug] [2024-11-03T18:08:47.898Z] Functions deploy failed.
+[debug] [2024-11-03T18:08:47.899Z] {
+  "endpoint": {
+    "id": "sendOrderConfirmation",
+    "project": "veridrop-e62d3",
+    "region": "us-central1",
+    "entryPoint": "sendOrderConfirmation",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "eventTrigger": {
+      "eventType": "google.cloud.firestore.document.v1.created",
+      "retry": false,
+      "eventFilters": {
+        "database": "(default)",
+        "namespace": "(default)"
+      },
+      "eventFilterPathPatterns": {
+        "document": "orders/{orderId}"
+      },
+      "region": "nam5"
+    },
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "veridrop-e62d3",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "8c0649d6d501b350646fc134bd7a5f5470bee18a"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Validation failed for trigger projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-596533: Invalid resource state for \"\": Permission denied while using the Eventarc Service Agent. If you recently started to use Eventarc, it may take a few minutes before all necessary permissions are propagated to the Service Agent. Otherwise, verify that it has Eventarc Service Agent role.",
+            "status": "FAILED_PRECONDITION"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions?functionId=sendOrderConfirmation had HTTP Error: 400, Validation failed for trigger projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-596533: Invalid resource state for \"\": Permission denied while using the Eventarc Service Agent. If you recently started to use Eventarc, it may take a few minutes before all necessary permissions are propagated to the Service Agent. Otherwise, verify that it has Eventarc Service Agent role.",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2024-11-03T18:08:48.097Z] Error: Failed to create function sendOrderConfirmation in region us-central1
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:278:30)
+    at async Fabricator.createEndpoint (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:137:13)
+    at async handle (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2024-11-03T18:10:11.656Z] ----------------------------------------------------------------------
+[debug] [2024-11-03T18:10:11.663Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2024-11-03T18:10:11.664Z] CLI Version:   13.23.1
+[debug] [2024-11-03T18:10:11.664Z] Platform:      darwin
+[debug] [2024-11-03T18:10:11.664Z] Node Version:  v20.11.0
+[debug] [2024-11-03T18:10:11.664Z] Time:          Sun Nov 03 2024 19:10:11 GMT+0100 (GMT+01:00)
+[debug] [2024-11-03T18:10:11.664Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-03T18:10:11.702Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-03T18:10:11.703Z] > authorizing via signed-in user (aaladan453@gmail.com)
+[debug] [2024-11-03T18:10:11.703Z] [iam] checking project veridrop-e62d3 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-03T18:10:11.703Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:11.703Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:11.704Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions [none]
+[debug] [2024-11-03T18:10:11.704Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:11.704Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-03T18:10:13.055Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions 200
+[debug] [2024-11-03T18:10:13.055Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-03T18:10:13.055Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:13.055Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:13.056Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-03T18:10:13.056Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-03T18:10:14.663Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-03T18:10:14.663Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/veridrop-e62d3/serviceAccounts/veridrop-e62d3@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'veridrop-e62d3'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2024-11-03T18:10:23.372Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:23.372Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:23.372Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 [none]
+[debug] [2024-11-03T18:10:24.079Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 200
+[debug] [2024-11-03T18:10:24.079Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 {"projectId":"veridrop-e62d3","projectNumber":"119825127004","displayName":"veridrop","name":"projects/veridrop-e62d3","resources":{"hostingSite":"veridrop-e62d3","realtimeDatabaseInstance":"veridrop-e62d3-default-rtdb"},"state":"ACTIVE","etag":"1_6582c689-2b8c-4bd6-be1a-17734394592f"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:24.090Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:24.091Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:24.091Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:24.091Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:24.099Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:24.100Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:24.100Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:24.101Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:24.101Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-03T18:10:24.101Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:24.122Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-03T18:10:24.122Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:24.123Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-03T18:10:24.123Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:24.124Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-03T18:10:24.124Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:25.584Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-03T18:10:25.584Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-03T18:10:25.588Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-03T18:10:25.589Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-03T18:10:25.611Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-03T18:10:25.611Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-03T18:10:25.613Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-03T18:10:25.613Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-03T18:10:25.614Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:25.614Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:25.614Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig [none]
+[debug] [2024-11-03T18:10:25.999Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig 200
+[debug] [2024-11-03T18:10:26.000Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3/adminSdkConfig {"projectId":"veridrop-e62d3","databaseURL":"https://veridrop-e62d3-default-rtdb.firebaseio.com","storageBucket":"veridrop-e62d3.firebasestorage.app"}
+[debug] [2024-11-03T18:10:26.001Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:26.001Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:26.001Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs [none]
+[debug] [2024-11-03T18:10:26.877Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs 200
+[debug] [2024-11-03T18:10:26.877Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs {"configs":[{"name":"projects/veridrop-e62d3/configs/gmail"}]}
+[debug] [2024-11-03T18:10:26.878Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:26.878Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:26.878Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables [none]
+[debug] [2024-11-03T18:10:27.195Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables 200
+[debug] [2024-11-03T18:10:27.195Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables {"variables":[{"name":"projects/veridrop-e62d3/configs/gmail/variables/email","updateTime":"2024-11-03T17:03:09.020073010Z"},{"name":"projects/veridrop-e62d3/configs/gmail/variables/password","updateTime":"2024-11-03T17:03:08.386327293Z"}]}
+[debug] [2024-11-03T18:10:27.196Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:27.196Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:27.196Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:27.196Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:27.196Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email [none]
+[debug] [2024-11-03T18:10:27.197Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password [none]
+[debug] [2024-11-03T18:10:27.622Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email 200
+[debug] [2024-11-03T18:10:27.623Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/email {"name":"projects/veridrop-e62d3/configs/gmail/variables/email","updateTime":"2024-11-03T17:03:09.020073010Z","text":"aaladan453@gmail.com"}
+[debug] [2024-11-03T18:10:27.847Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password 200
+[debug] [2024-11-03T18:10:27.847Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/veridrop-e62d3/configs/gmail/variables/password {"name":"projects/veridrop-e62d3/configs/gmail/variables/password","updateTime":"2024-11-03T17:03:08.386327293Z","text":"rotlrfdwwcbwllxz"}
+[debug] [2024-11-03T18:10:27.853Z] Validating nodejs source
+[debug] [2024-11-03T18:10:28.694Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.1.0",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-11-03T18:10:28.694Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-03T18:10:28.695Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-03T18:10:28.701Z] Found firebase-functions binary at '/Users/wollow/workspace/sandbox/veridrop/template-web-react-tailwind/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8544
+
+[debug] [2024-11-03T18:10:28.993Z] Got response from /__/functions.yaml {"endpoints":{"sendOrderConfirmation":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"eventTrigger":{"eventType":"google.cloud.firestore.document.v1.created","eventFilters":{"database":"(default)","namespace":"(default)"},"eventFilterPathPatterns":{"document":"orders/{orderId}"},"retry":false},"entryPoint":"sendOrderConfirmation"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:34.013Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:34.013Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:34.013Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-03T18:10:34.013Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:36.316Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-03T18:10:36.316Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-03T18:10:36.317Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-03T18:10:36.317Z] > authorizing via signed-in user (aaladan453@gmail.com)
+[debug] [2024-11-03T18:10:36.317Z] [iam] checking project veridrop-e62d3 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-03T18:10:36.318Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:36.318Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:36.318Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions [none]
+[debug] [2024-11-03T18:10:36.318Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:36.318Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-03T18:10:37.475Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions 200
+[debug] [2024-11-03T18:10:37.475Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/veridrop-e62d3:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-03T18:10:37.476Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:37.476Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:37.479Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances pageSize=100&pageToken=
+[debug] [2024-11-03T18:10:39.081Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances 200
+[debug] [2024-11-03T18:10:39.081Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/veridrop-e62d3/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/wollow/workspace/sandbox/veridrop/template-web-react-tailwind/functions (83.23 KB) for uploading 
+[debug] [2024-11-03T18:10:39.134Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:39.134Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:39.134Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions [none]
+[debug] [2024-11-03T18:10:40.634Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions 200
+[debug] [2024-11-03T18:10:40.634Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/veridrop-e62d3/locations/-/functions {}
+[debug] [2024-11-03T18:10:40.634Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:40.634Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:40.635Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-03T18:10:41.801Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/-/functions 200
+[debug] [2024-11-03T18:10:41.802Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/-/functions {}
+[debug] [2024-11-03T18:10:41.803Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:41.803Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:41.803Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/veridrop-e62d3/databases/(default) [none]
+[debug] [2024-11-03T18:10:43.270Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/veridrop-e62d3/databases/(default) 200
+[debug] [2024-11-03T18:10:43.270Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/veridrop-e62d3/databases/(default) {"name":"projects/veridrop-e62d3/databases/(default)","uid":"fe2f0b17-68dc-48e7-9a5b-5b8d2b313f84","createTime":"2024-11-03T16:47:32.622523Z","updateTime":"2024-11-03T16:47:32.622523Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-11-03T17:10:43.448260Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"ILP/k7HhwIkDMMfFlrDawIkD"}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:43.273Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:43.273Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:43.274Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:43.274Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:43.275Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:43.275Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-03T18:10:43.275Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:43.275Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:43.275Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com [none]
+[debug] [2024-11-03T18:10:43.275Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:43.277Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com [none]
+[debug] [2024-11-03T18:10:43.277Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:43.278Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com [none]
+[debug] [2024-11-03T18:10:43.278Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:43.279Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com [none]
+[debug] [2024-11-03T18:10:43.279Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com x-goog-quota-user=projects/veridrop-e62d3
+[debug] [2024-11-03T18:10:46.761Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com 200
+[debug] [2024-11-03T18:10:46.761Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-11-03T18:10:47.010Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com 200
+[debug] [2024-11-03T18:10:47.010Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2024-11-03T18:10:48.704Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com 200
+[debug] [2024-11-03T18:10:48.705Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-03T18:10:48.705Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com 200
+[debug] [2024-11-03T18:10:48.705Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/veridrop-e62d3/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-03T18:10:48.706Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:48.706Z] Checked if tokens are valid: true, expires at: 1730659430703
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-03T18:10:48.706Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:48.706Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:48.706Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-03T18:10:48.707Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-03T18:10:49.487Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-03T18:10:49.487Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-119825127004@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"113526210237906380730"}}
+[debug] [2024-11-03T18:10:49.681Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-03T18:10:49.681Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/119825127004/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-119825127004@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"117618205349660325317"}}
+[debug] [2024-11-03T18:10:49.682Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:49.683Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:49.683Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:getIamPolicy [none]
+[debug] [2024-11-03T18:10:50.689Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:getIamPolicy 200
+[debug] [2024-11-03T18:10:50.689Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/119825127004:getIamPolicy {"version":1,"etag":"BwYmBg4w7Fo=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:119825127004@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-119825127004@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-119825127004@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com","serviceAccount:119825127004@cloudservices.gserviceaccount.com","serviceAccount:veridrop-e62d3@appspot.gserviceaccount.com"]},{"role":"roles/eventarc.eventReceiver","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com"]},{"role":"roles/eventarc.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-eventarc.iam.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-119825127004@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebaseappcheck.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-119825127004@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-119825127004@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-wll8q@veridrop-e62d3.iam.gserviceaccount.com","serviceAccount:service-119825127004@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:AaLadan453@gmail.com"]},{"role":"roles/run.invoker","members":["serviceAccount:119825127004-compute@developer.gserviceaccount.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-119825127004@serverless-robot-prod.iam.gserviceaccount.com"]}]}
+[debug] [2024-11-03T18:10:50.691Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:50.691Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:50.691Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 [none]
+[debug] [2024-11-03T18:10:51.414Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 200
+[debug] [2024-11-03T18:10:51.414Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/veridrop-e62d3 {"projectId":"veridrop-e62d3","projectNumber":"119825127004","displayName":"veridrop","name":"projects/veridrop-e62d3","resources":{"hostingSite":"veridrop-e62d3","realtimeDatabaseInstance":"veridrop-e62d3-default-rtdb"},"state":"ACTIVE","etag":"1_6582c689-2b8c-4bd6-be1a-17734394592f"}
+[debug] [2024-11-03T18:10:51.417Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:51.417Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:51.417Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/veridrop-e62d3/billingInfo [none]
+[debug] [2024-11-03T18:10:52.839Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/veridrop-e62d3/billingInfo 200
+[debug] [2024-11-03T18:10:52.839Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/veridrop-e62d3/billingInfo {"name":"projects/veridrop-e62d3/billingInfo","projectId":"veridrop-e62d3","billingAccountName":"billingAccounts/01CD30-9595FD-9F9C13","billingEnabled":true}
+[debug] [2024-11-03T18:10:52.843Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:52.844Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:10:52.844Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-11-03T18:10:54.151Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-11-03T18:10:54.152Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/0e9de492-81ff-41ae-ba0f-dd39bd8283b6.zip?GoogleAccessId=service-119825127004@gcf-admin-robot.iam.gserviceaccount.com&Expires=1730659254&Signature=hNHm9RCXlNdc1UCx4UMSubYl2%2Fz39Lecsc7DsISKIbC0DW8UEqD9aXkJtAz4Lf%2BTXoPOcyjwvMmS4zvOiClc%2Fe7kGafNKfzV%2F7fyVIplwfwHlx8N7aAsN%2F86oFLIulwzW%2F2pyLPBCuqrGQcShA2qltzJhbHxUoW1ZUrPNCSchLnzfJRg7NHINSN39aARn10CbCstuRa460WkNe7p6%2BxugP5WHfg1rjERj2ewg4YrNuauqnT9NpuZAzSQ%2BDQmC01rCCqvp75oIvXAFVtHKSir%2FJpS0H9JhaRLSs2CFGslbO2fenqgwPtLyhZKD3%2Bw6Io%2BZc86z0u3FrdTEQhg2Hydow%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-119825127004-us-central1","object":"0e9de492-81ff-41ae-ba0f-dd39bd8283b6.zip"}}
+[debug] [2024-11-03T18:10:54.154Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/0e9de492-81ff-41ae-ba0f-dd39bd8283b6.zip GoogleAccessId=service-119825127004%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1730659254&Signature=hNHm9RCXlNdc1UCx4UMSubYl2%2Fz39Lecsc7DsISKIbC0DW8UEqD9aXkJtAz4Lf%2BTXoPOcyjwvMmS4zvOiClc%2Fe7kGafNKfzV%2F7fyVIplwfwHlx8N7aAsN%2F86oFLIulwzW%2F2pyLPBCuqrGQcShA2qltzJhbHxUoW1ZUrPNCSchLnzfJRg7NHINSN39aARn10CbCstuRa460WkNe7p6%2BxugP5WHfg1rjERj2ewg4YrNuauqnT9NpuZAzSQ%2BDQmC01rCCqvp75oIvXAFVtHKSir%2FJpS0H9JhaRLSs2CFGslbO2fenqgwPtLyhZKD3%2Bw6Io%2BZc86z0u3FrdTEQhg2Hydow%3D%3D
+[debug] [2024-11-03T18:10:54.155Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/0e9de492-81ff-41ae-ba0f-dd39bd8283b6.zip [stream]
+[debug] [2024-11-03T18:11:05.281Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/0e9de492-81ff-41ae-ba0f-dd39bd8283b6.zip 200
+[debug] [2024-11-03T18:11:05.282Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-119825127004-us-central1/0e9de492-81ff-41ae-ba0f-dd39bd8283b6.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function sendOrderConfirmation(us-central1)... 
+[debug] [2024-11-03T18:11:05.290Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:05.290Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:05.290Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions functionId=sendOrderConfirmation
+[debug] [2024-11-03T18:11:05.290Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions {"name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-uploads-119825127004-us-central1","object":"0e9de492-81ff-41ae-ba0f-dd39bd8283b6.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"eventTrigger":{"eventType":"google.cloud.firestore.document.v1.created","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"triggerRegion":"nam5"}}
+[debug] [2024-11-03T18:11:19.164Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions 200
+[debug] [2024-11-03T18:11:19.165Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/functions {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-11-03T18:11:19.166Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:19.167Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:19.167Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:11:20.037Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:11:20.038Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-03T18:11:20.540Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:11:20.540Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:20.541Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:20.541Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:11:21.407Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:11:21.407Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-03T18:11:22.409Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:11:22.410Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:22.410Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:22.410Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:11:23.263Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:11:23.263Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-03T18:11:25.265Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:11:25.266Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:25.266Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:25.266Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:11:26.149Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:11:26.149Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-03T18:11:30.151Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:11:30.152Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:30.152Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:30.152Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:11:31.151Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:11:31.151Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:11:39.154Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:11:39.157Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:39.157Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:39.157Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:11:40.368Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:11:40.369Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:11:50.370Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:11:50.372Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:50.372Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:11:50.373Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:11:51.821Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:11:51.822Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:12:01.823Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:12:01.824Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:01.824Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:01.825Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:12:02.801Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:12:02.801Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:12:12.802Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:12:12.807Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:12.807Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:12.808Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:12:14.004Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:12:14.005Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build finished","state":"COMPLETE","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","message":"Creating Cloud Run service","state":"IN_PROGRESS","resource":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","resourceUri":"https://console.cloud.google.com/run/detail/us-central1/sendorderconfirmation?project=veridrop-e62d3"},{"name":"TRIGGER","state":"NOT_STARTED"}],"sourceToken":"Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE=","operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:12:14.005Z] Got source token Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE= for region us-central1
+[debug] [2024-11-03T18:12:24.008Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:12:24.010Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:24.010Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:24.011Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:12:25.220Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:12:25.220Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build finished","state":"COMPLETE","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","message":"Creating Cloud Run service","state":"IN_PROGRESS","resource":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","resourceUri":"https://console.cloud.google.com/run/detail/us-central1/sendorderconfirmation?project=veridrop-e62d3"},{"name":"TRIGGER","state":"NOT_STARTED"}],"sourceToken":"Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE=","operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:12:25.220Z] Got source token Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE= for region us-central1
+[debug] [2024-11-03T18:12:35.222Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:12:35.222Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:35.223Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:35.223Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:12:37.620Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:12:37.621Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build finished","state":"COMPLETE","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","message":"Creating Cloud Run service","state":"IN_PROGRESS","resource":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","resourceUri":"https://console.cloud.google.com/run/detail/us-central1/sendorderconfirmation?project=veridrop-e62d3"},{"name":"TRIGGER","state":"NOT_STARTED"}],"sourceToken":"Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE=","operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:12:37.621Z] Got source token Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE= for region us-central1
+[debug] [2024-11-03T18:12:47.622Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:12:47.624Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:47.624Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:47.624Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:12:48.752Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:12:48.753Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build finished","state":"COMPLETE","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","message":"Creating Cloud Run service","state":"IN_PROGRESS","resource":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","resourceUri":"https://console.cloud.google.com/run/detail/us-central1/sendorderconfirmation?project=veridrop-e62d3"},{"name":"TRIGGER","state":"NOT_STARTED"}],"sourceToken":"Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE=","operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:12:48.753Z] Got source token Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE= for region us-central1
+[debug] [2024-11-03T18:12:58.756Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:12:58.758Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:58.758Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:12:58.759Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:13:00.203Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:13:00.203Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build finished","state":"COMPLETE","resource":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/467af70e-1897-4903-b35b-f0745067d831?project=119825127004"},{"name":"SERVICE","message":"Creating Cloud Run service","state":"IN_PROGRESS","resource":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","resourceUri":"https://console.cloud.google.com/run/detail/us-central1/sendorderconfirmation?project=veridrop-e62d3"},{"name":"TRIGGER","state":"NOT_STARTED"}],"sourceToken":"Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE=","operationType":"CREATE_FUNCTION","buildName":"projects/119825127004/locations/us-central1/builds/467af70e-1897-4903-b35b-f0745067d831"},"done":false}
+[debug] [2024-11-03T18:13:00.204Z] Got source token Cldwcm9qZWN0cy8xMTk4MjUxMjcwMDQvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy80NjdhZjcwZS0xODk3LTQ5MDMtYjM1Yi1mMDc0NTA2N2Q4MzESeHVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L3Zlcmlkcm9wLWU2MmQzL2djZi1hcnRpZmFjdHMvdmVyaWRyb3AtLWU2MmQzX191cy0tY2VudHJhbDFfX3NlbmRfb3JkZXJfY29uZmlybWF0aW9uOnZlcnNpb25fMRjcrImxvgMiTXByb2plY3RzL3Zlcmlkcm9wLWU2MmQzL2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvc2VuZE9yZGVyQ29uZmlybWF0aW9uKgwI/PmeuQYQiM/KzwEyCG5vZGVqczE4OnYKI2djci5pby9nYWUtcnVudGltZXMvbm9kZWpzMTg6c3RhYmxlEk91cy1jZW50cmFsMS1kb2NrZXIucGtnLmRldi9zZXJ2ZXJsZXNzLXJ1bnRpbWVzL2dvb2dsZS0yMi1mdWxsL3J1bnRpbWVzL25vZGVqczE4QAE= for region us-central1
+[debug] [2024-11-03T18:13:10.205Z] [create-default-us-central1-sendOrderConfirmation] Retrying task index 0
+[debug] [2024-11-03T18:13:10.206Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:10.207Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:10.207Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 [none]
+[debug] [2024-11-03T18:13:12.223Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 200
+[debug] [2024-11-03T18:13:12.223Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4 {"name":"projects/veridrop-e62d3/locations/us-central1/operations/operation-1730657478175-626061836eb1c-b943b3ee-146d11a4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-03T18:11:19.288430381Z","endTime":"2024-11-03T18:13:03.556051944Z","target":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/veridrop-e62d3/locations/us-central1/functions/sendOrderConfirmation","buildConfig":{"runtime":"nodejs18","entryPoint":"sendOrderConfirmation","source":{"storageSource":{"bucket":"gcf-v2-sources-119825127004-us-central1","object":"sendOrderConfirmation/function-source.zip","generation":"1730657478446672"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/veridrop-e62d3/serviceAccounts/119825127004-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}","GCLOUD_PROJECT":"veridrop-e62d3","EVENTARC_CLOUD_EVENT_SOURCE":"projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"sendOrderConfirmation","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690","triggerRegion":"nam5","eventType":"google.cloud.firestore.document.v1.created","eventFilters":[{"attribute":"database","value":"(default)"},{"attribute":"namespace","value":"(default)"},{"attribute":"document","value":"orders/{orderId}","operator":"match-path-pattern"}],"serviceAccountEmail":"119825127004-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8c0649d6d501b350646fc134bd7a5f5470bee18a"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/veridrop-e62d3/locations/us-central1/services/sendorderconfirmation"},{"name":"TRIGGER","message":"Deleting Eventarc trigger","state":"COMPLETE","resource":"projects/veridrop-e62d3/locations/nam5/triggers/sendorderconfirmation-365690"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Could not create or update Cloud Run service sendorderconfirmation, Container Healthcheck failed. Revision 'sendorderconfirmation-00001-xuw' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=veridrop-e62d3&resource=cloud_run_revision/service_name/sendorderconfirmation/revision_name/sendorderconfirmation-00001-xuw&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22sendorderconfirmation%22%0Aresource.labels.revision_name%3D%22sendorderconfirmation-00001-xuw%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"}}
+[debug] [2024-11-03T18:13:12.223Z] Got source token undefined for region us-central1
+[error] Could not create or update Cloud Run service sendorderconfirmation, Container Healthcheck failed. Revision 'sendorderconfirmation-00001-xuw' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=veridrop-e62d3&resource=cloud_run_revision/service_name/sendorderconfirmation/revision_name/sendorderconfirmation-00001-xuw&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22sendorderconfirmation%22%0Aresource.labels.revision_name%3D%22sendorderconfirmation-00001-xuw%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+[debug] [2024-11-03T18:13:12.231Z] Total Function Deployment time: 126937
+[debug] [2024-11-03T18:13:12.232Z] 1 Functions Deployed
+[debug] [2024-11-03T18:13:12.232Z] 1 Functions Errored
+[debug] [2024-11-03T18:13:12.232Z] 0 Function Deployments Aborted
+[debug] [2024-11-03T18:13:12.232Z] Average Function Deployment time: 126936
+[info] 
+[info] Functions deploy had errors with the following functions:
+	sendOrderConfirmation(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-03T18:13:13.562Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:13.562Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:13.563Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:13.564Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:13.564Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation [none]
+[debug] [2024-11-03T18:13:13.566Z] >>> [apiv2][query] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list [none]
+[debug] [2024-11-03T18:13:15.265Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation 404
+[debug] [2024-11-03T18:13:15.265Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation {"error":{"code":404,"message":"Package \"projects/veridrop-e62d3/locations/us-central1/repositories/gcf-artifacts/packages/send_order_confirmation\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-03T18:13:23.565Z] Failed docker command with error  Timeout {}
+[debug] [2024-11-03T18:13:23.568Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:23.568Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:23.568Z] >>> [apiv2][query] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list [none]
+[debug] [2024-11-03T18:13:24.512Z] <<< [apiv2][status] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list 404
+[debug] [2024-11-03T18:13:24.513Z] <<< [apiv2][body] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-03T18:13:24.513Z] Failed docker command with error  Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-03T18:13:24.616Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:24.616Z] Checked if tokens are valid: true, expires at: 1730659430703
+[debug] [2024-11-03T18:13:24.616Z] >>> [apiv2][query] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list [none]
+[debug] [2024-11-03T18:13:24.974Z] <<< [apiv2][status] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list 404
+[debug] [2024-11-03T18:13:24.974Z] <<< [apiv2][body] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-03T18:13:24.975Z] Failed docker command with error  Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/veridrop-e62d3/us/gcf 
+[debug] [2024-11-03T18:13:24.976Z] Functions deploy failed.
+[debug] [2024-11-03T18:13:24.976Z] {
+  "endpoint": {
+    "id": "sendOrderConfirmation",
+    "project": "veridrop-e62d3",
+    "region": "us-central1",
+    "entryPoint": "sendOrderConfirmation",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "eventTrigger": {
+      "eventType": "google.cloud.firestore.document.v1.created",
+      "retry": false,
+      "eventFilters": {
+        "database": "(default)",
+        "namespace": "(default)"
+      },
+      "eventFilterPathPatterns": {
+        "document": "orders/{orderId}"
+      },
+      "region": "nam5"
+    },
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"veridrop-e62d3\",\"databaseURL\":\"https://veridrop-e62d3-default-rtdb.firebaseio.com\",\"storageBucket\":\"veridrop-e62d3.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "veridrop-e62d3",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/veridrop-e62d3/locations/us-central1/services/sendOrderConfirmation"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "8c0649d6d501b350646fc134bd7a5f5470bee18a"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Could not create or update Cloud Run service sendorderconfirmation, Container Healthcheck failed. Revision 'sendorderconfirmation-00001-xuw' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=veridrop-e62d3&resource=cloud_run_revision/service_name/sendorderconfirmation/revision_name/sendorderconfirmation-00001-xuw&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22sendorderconfirmation%22%0Aresource.labels.revision_name%3D%22sendorderconfirmation-00001-xuw%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+    "original": {
+      "code": 3,
+      "message": "Could not create or update Cloud Run service sendorderconfirmation, Container Healthcheck failed. Revision 'sendorderconfirmation-00001-xuw' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=veridrop-e62d3&resource=cloud_run_revision/service_name/sendorderconfirmation/revision_name/sendorderconfirmation-00001-xuw&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22sendorderconfirmation%22%0Aresource.labels.revision_name%3D%22sendorderconfirmation-00001-xuw%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2024-11-03T18:13:25.354Z] <<< [apiv2][status] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list 404
+[debug] [2024-11-03T18:13:25.354Z] <<< [apiv2][body] GET https://us.gcr.io/v2/veridrop-e62d3/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-03T18:13:25.452Z] Error: Failed to create function sendOrderConfirmation in region us-central1
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:278:30)
+    at async Fabricator.createEndpoint (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:137:13)
+    at async handle (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
